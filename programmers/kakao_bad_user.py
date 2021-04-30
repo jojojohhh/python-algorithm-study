@@ -19,6 +19,3 @@ def solution(user_id, banned_id):
             if i not in answer:
                 answer.append(i)
     return len(answer)
-u = ["frodo", "fradi", "crodo", "abc123", "frodoc"]
-b = ["fr*d*", "*rodo", "******", "******"]
-print(solution(u, b))
