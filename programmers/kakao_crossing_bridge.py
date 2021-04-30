@@ -11,7 +11,6 @@ def check(stone, k, m):
 
 
 def solution(stones, k):
-    answer = 0
     r = max(stones)
     l = min(stones)
     while True:
@@ -23,7 +22,3 @@ def solution(stones, k):
         else:
             r = m - 1
     return l
-
-
-s = [2, 4, 5, 3, 2, 1, 4, 2, 5, 1]
-print(solution(s, 3))
