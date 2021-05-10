@@ -11,6 +11,3 @@ def solution(scoville, k):
         else:
             return -1
     return answer
-
-
-print(solution([1, 2, 3, 9, 10, 12], 7) )
