@@ -5,6 +5,4 @@ def solution(number, k):
             k -= 1
             st.pop()
         st.append(num)
-    if k != 0:
-        st = st[:-k]
     return ''.join(st[:-k]) if k != 0 else ''.join(st)
