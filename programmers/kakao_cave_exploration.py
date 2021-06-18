@@ -24,17 +24,12 @@ def solution(n, path, order):
 
     q = deque()
     q.append(0)
-    print(adj)
-    print(precedeA, precedeB)
     while q:
         current = q.popleft()
-        print(current, precedeA.get(precedeB.get(current)), precedeB.get(current))
         if current == precedeA.get(precedeB.get(current)):
             visited[current] = 2
         else:
-            print(adj[current])
             for neighbor in adj[current]:
-                print(visited)
                 if visited[neighbor] == 0:
                     q.append(neighbor)
                     visited[neighbor] = 1
@@ -50,8 +45,3 @@ def solution(n, path, order):
         if i == 0:
             return False
     return answer
-
-
-print(solution(9, [[0,1],[0,3],[0,7],[8,1],[3,6],[1,2],[4,7],[7,5]]	, [[8,5],[6,7],[4,1]]	))
-# print(solution(9, [[8,1],[0,1],[1,2],[0,7],[4,7],[0,3],[7,5],[3,6]]	, [[4,1],[5,2]]		))
-# print(solution(9, [[0,1],[0,3],[0,7],[8,1],[3,6],[1,2],[4,7],[7,5]], [[4,1],[8,7],[6,5]]))
